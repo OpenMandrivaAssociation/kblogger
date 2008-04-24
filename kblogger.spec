@@ -15,6 +15,8 @@ BuildRequires:  kdelibs4-devel
 BuildRequires:  kdepimlibs4-devel
 BuildRequires:  kdebase4-devel
 Requires:       kdebase4-runtime
+Obsoletes:      kde4-%name <= 0.8
+Provides:       kde4-%name = %version
 
 %description
 KBlogger is a simple to use blogging application for the K Destkop
