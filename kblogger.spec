@@ -1,15 +1,14 @@
 %define version 0.8
 %define release %mkrel 0.%revision.3
 %define revision 741164
-%define oname   kblogger
 
-Name:		kde4-kblogger
+Name:		kblogger
 Version:	%{version}
 Release:	%{release}
 License:	GPLv2+
 Url:	        http://kblogger.pwsp.net/
 Group:		Graphical desktop/KDE
-Source0:	%{oname}-%version.%revision.tar.bz2
+Source0:	%{name}-%version.%revision.tar.bz2
 Summary:        Blogging application
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:  kdelibs4-devel
@@ -46,7 +45,7 @@ Google Blogger.
 #------------------------------------------------
 
 %prep
-%setup -q -n %oname
+%setup -q -n %name
 
 %build
 %cmake_kde4 
