@@ -1,22 +1,19 @@
-%define version 0.8
-%define release %mkrel 0.%revision.3
-%define revision 741164
+%define betaver alpha2
 
 Name:		kblogger
-Version:	%{version}
-Release:	%{release}
+Version:	1.0
+Release:	%mkrel -c %betaver 1
 License:	GPLv2+
 Url:	        http://kblogger.pwsp.net/
 Group:		Graphical desktop/KDE
-Source0:	%{name}-%version.%revision.tar.bz2
+Source0:	http://kblogger.pwsp.net/files/%name-%version-%betaver.tar.bz2
 Summary:        Blogging application
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:  kdelibs4-devel
 BuildRequires:  kdepimlibs4-devel
 BuildRequires:  kdebase4-devel
 Requires:       kdebase4-runtime
-Obsoletes:      kde4-%name <= 0.8
-Provides:       kde4-%name = %version
+Obsoletes:      kde4-%name <= %version-%release
 
 %description
 KBlogger is a simple to use blogging application for the K Destkop
@@ -57,7 +54,6 @@ Google Blogger.
 cd build
 rm -rf %buildroot
 %{makeinstall_std}
-
 
 %clean
 rm -rf %buildroot
