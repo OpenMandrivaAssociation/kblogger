@@ -24,14 +24,6 @@ writing.
 By now KBlogger supports two API's which are the MetaWeblog and the
 Google Blogger.
 
-%post
-%{update_desktop_database}
-%update_icon_cache crystalsvg
-
-%postun
-%{clean_desktop_database}
-%clean_icon_cache crystalsvg
-
 %files
 %defattr(-,root,root)
 %{_kde_bindir}/kblogger
