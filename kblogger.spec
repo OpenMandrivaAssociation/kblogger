@@ -1,8 +1,8 @@
-%define betaver alpha2
+%define betaver alpha3
 
 Name:		kblogger
 Version:	1.0
-Release:	%mkrel -c %betaver 2
+Release:	%mkrel -c %betaver 1
 License:	GPLv2+
 Url:	        http://kblogger.pwsp.net/
 Group:		Graphical desktop/KDE
@@ -11,7 +11,6 @@ Summary:        Blogging application
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:  kdelibs4-devel
 BuildRequires:  kdepimlibs4-devel
-BuildRequires:  kdebase4-devel
 Requires:       kdebase4-runtime
 Obsoletes:      kde4-%name <= %version-%release
 
@@ -31,7 +30,7 @@ Google Blogger.
 %{_kde_appsdir}/kblogger/kbloggerui.rc
 %{_kde_appsdir}/kblogger/pics/kbloggerWelcome.jpg
 %{_kde_datadir}/config.kcfg/kblogger.kcfg
-%{_kde_iconsdir}/crystalsvg/*/*/*.png
+%{_kde_iconsdir}/*/*/*/*
 
 #------------------------------------------------
 
@@ -43,9 +42,8 @@ Google Blogger.
 %make
 
 %install
-cd build
 rm -rf %buildroot
-%{makeinstall_std}
+%{makeinstall_std} -C build
 
 %clean
 rm -rf %buildroot
