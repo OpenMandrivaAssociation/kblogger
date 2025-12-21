@@ -9,6 +9,7 @@ Group:		Graphical desktop/KDE
 Source0:	http://kblogger.pwsp.net/files/%name-%version-%betaver.tar.bz2
 Summary:        Blogging application
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires:	make
 BuildRequires:  kdelibs4-devel
 BuildRequires:  kdepimlibs4-devel
 Requires:       kdebase4-runtime
