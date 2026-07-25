@@ -2,7 +2,7 @@
 
 Name:		kblogger
 Version:	1.0
-Release:	%mkrel -c %betaver 2
+Release:	-c %betaver 2.1
 License:	GPLv2+
 Url:	        https://kblogger.pwsp.net/
 Group:		Graphical desktop/KDE
